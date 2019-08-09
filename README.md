@@ -13,5 +13,5 @@ pip install -r requirements.txt
 # Quickstart
 In folder with tests run this command:
 ```bash
-$ pytest test_pytest_hw
+$ pytest -v test_pytest_hw.py
 ```
