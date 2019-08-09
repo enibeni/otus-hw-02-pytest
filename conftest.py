@@ -33,3 +33,14 @@ def dict_with_keys_inserted_one_by_one():
     d["fifth"] = 5
     d["last"] = 6
     return d
+
+
+@pytest.fixture(scope="function", autouse=True)
+def fixture_for_request_info(request):
+    yield
+    print("___________________________")
+    print(f"{request.node}")
+    print(f"{request.scope}")
+    print(f"{request.cls}")
+    print(f"{request.module}")
+    print("___________________________")
